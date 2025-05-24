@@ -2,7 +2,6 @@ import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:motion_toast/motion_toast.dart';
 import 'package:newsapp/app_locator.dart';
 import 'package:newsapp/app_router.dart';
 import 'package:newsapp/app_router.gr.dart';
@@ -153,12 +152,6 @@ class HomeViewScreen extends StatelessWidget {
                         onRefresh: () async {
                           await model.refreshArticles(
                               loadMore: true, context: context);
-                          MotionToast.success(
-                              title: Text('Success'),
-                              description: Text(
-                                'Articles refreshed',
-                                style: GoogleFonts.lato(),
-                              ));
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(

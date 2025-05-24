@@ -28,6 +28,9 @@ class SearchViewModel extends BaseViewModel {
       notifyListeners();
     } catch (e) {
       print(e);
+    } finally {
+      _isLoad = false;
+      notifyListeners();
     }
   }
 
@@ -65,7 +68,6 @@ class SearchViewModel extends BaseViewModel {
           })
           .whereType<Articles>()
           .toList();
-
       _bookmarkedArticles = articles;
       print('bookmarked articles list : $_bookmarkedArticles');
       notifyListeners();

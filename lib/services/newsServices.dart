@@ -1,12 +1,13 @@
 import 'dart:convert';
 
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:newsapp/model/article.dart';
 import 'package:http/http.dart' as http;
 import 'package:newsapp/model/articleResponse.dart';
 
 class NewsServices {
-  static const String apiKey = 'pub_f3e276164fa746f080c05ad16c2e5981';
-  static const String baseUrl =
+  static final String? apiKey = dotenv.env['API_KEY'];
+  static final String baseUrl =
       'https://newsdata.io/api/1/latest?apikey=$apiKey&country=in,us,gb,ar,au&language=en&category=education,technology,world,science,business&timezone=Asia/Kolkata';
 
   Future<ArticleResponse?> getArticles({String? page}) async {

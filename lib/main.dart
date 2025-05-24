@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:newsapp/app_locator.dart';
 import 'package:newsapp/app_router.dart';
 import 'package:newsapp/app_router.gr.dart';
@@ -9,6 +10,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await dotenv.load(fileName: "lib/.env");
   setupLocator();
   isLoggedIn();
   final prefs = await SharedPreferences.getInstance();

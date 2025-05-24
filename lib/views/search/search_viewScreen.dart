@@ -6,13 +6,13 @@ import 'package:newsapp/app_locator.dart';
 import 'package:newsapp/app_router.dart';
 import 'package:newsapp/app_router.gr.dart';
 import 'package:newsapp/model/article.dart';
-import 'package:newsapp/search/search_viewModel.dart';
+import 'package:newsapp/views/search/search_viewModel.dart';
 import 'package:provider/provider.dart';
 
 @RoutePage()
 class SearchResultScreen extends StatelessWidget {
   final String value;
-  const SearchResultScreen({super.key, required this.value});
+  SearchResultScreen({super.key, required this.value});
 
   @override
   Widget build(BuildContext context) {

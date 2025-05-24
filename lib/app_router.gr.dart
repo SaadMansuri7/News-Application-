@@ -10,7 +10,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i7;
 import 'package:flutter/material.dart' as _i8;
-import 'package:newsapp/search/search_viewScreen.dart' as _i5;
+import 'package:newsapp/views/search/search_viewScreen.dart' as _i5;
 import 'package:newsapp/views/details/details_viewScreen.dart' as _i1;
 import 'package:newsapp/views/home/homo_viewScreen.dart' as _i2;
 import 'package:newsapp/views/logIn/login_viewScreen.dart' as _i3;
